@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakahlia media - الشيخ محمد متولي الشعراوي</title>
+    
+    <!-- قسم الـ CSS لتنسيق وتجميل الصفحة بنفس ستايل الصفحات السابقة -->
+    <style>
+        body {
+            background-color: #e6f2ff; /* لون الخلفية المتناسق */
+            font-family: 'Andalus', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2b2b2b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #0056b3;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق الصورة الشخصية لفضيلة الشيخ */
+        .article-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            margin: 20px auto 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .article-img:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #d9534f;
+            font-size: 24px;
+            margin-top: 40px;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-right: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* رابط العودة للرئيسية */
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 18px;
+            background-color: #0056b3;
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #003d82;
+            text-decoration: none;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003d82;
+        }
+
+        /* زر الصعود لأعلى الخاص بالـ JS */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #003d82;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>الشيخ محمد متولي الشعراوي</h1>
+    </header>
+
+    <!-- استبدال صورة 222.jpeg برابط صورة خارجي حقيقي ومستقر للشيخ الشعراوي -->
+    <img src="data:image/jpeg;base64,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" class="article-img" width="400" height="400" alt="فضيلة الشيخ محمد متولي الشعراوي">
+
+    <p>
+        <strong>في ذكرى وفاة الشيخ الشعراوي.. تعرّف على سيرة إمام الدعاة ومواقفه البارزة</strong>
+    </p>
+    <p>
+        تحل اليوم ذكرى وفاة الشيخ الشعراوي التي توافق 22 صفر، حيث ولد إمام الدعاة بقرية دقادوس، مركز ميت غمر بمحافظة الدقهلية عام 1911م، وأتم حفظ القرآن الكريم في الحادية عشرة من عمره، وحصل على الشهادة الابتدائية الأزهرية عام 1923م.
+    </p>
+
+    <h2>ذكرى وفاة الشيخ الشعراوي</h2>
+    <p>
+        وفي ذكرى وفاة الشيخ <a href="https://www.elwatannews.com/news/details/6146506" target="_blank">الشعراوي</a>، ترصد «الوطن» محطات من حياته «الإمام المجدد» الذي لم يرغب في الالتحاق بالجامعة بعد حصوله على الثانوية الأزهرية، إلا أن والده أصر على إكماله الدراسة، حتى تخرج في كلية اللغة العربية عام 1940م.
+    </p>
+    <p>
+        ومن أشهر مواقف الشيخ الشعراوي، إرسال برقية إلى الملك سعود بن عبد العزيز آل سعود أثناء إقامته بالمملكة العربية السعودية، يعترض فيها على نقل مقام سيدنا إبراهيم عليه السلام؛ لتوسعة المطاف حول الكعبة الشريفة؛ مؤيِّدًا رأيه بالأدلة الشرعية على عدم جواز ذلك.
+    </p>
+    <p>
+        وعلى الفور استجاب الملك سعود بن عبدالعزيز إلى برقية الشيخ محمد متولى الشعراوي، والتي أقر رأيه ومنع نقل المقام من مكانه، واستشاره في بعض شئون توسعة الحرم المكي الشريف، وأخذ بمشورته.
+    </p>
+    <p>
+        وكان للشيخ محمد متولى مواقف وطنية قوية ضد الاحتلال، وجهودٌ عظيمة في رد الشبهات عن الإسلام والقرآن وسيدنا رسول الله ﷺ، وذلك من خلال تقديمِ ردود عقلانية ومنطقية.
+    </p>
+
+    <h2>أبرز المناصب التي خدم من خلالها الشيخُ الشعراوي الدعوةَ الإسلامية</h2>
+    <p>
+        تولى الشيخ محمد متولى الشعراوي منصب مدير إدارة مكتب فضيلة الإمام الأكبر حسن مأمون شيخ الأزهر الأسبق 1964م، ورئيس بعثة الأزهر الشريف في الجزائر 1966م، وبالإضافة إلى وزير الأوقاف وشئون الأزهر بجمهورية مصر العربية 1976م، وشغله عضوية مجمع البحوث الإسلامية 1980م، ومجمع اللغة العربية، ومجلس الشورى بجمهورية مصر العربية 1980م.
+    </p>
+    <p>
+        ويعد «الشعراوي» أحد أشهر مفسري معاني <a href="https://www.elwatannews.com/news/details/6146236" target="_blank">القرآن الكريم</a> في العصر الحديث، ولديه مؤلفات علمية عديدة منها:
+    </p>
+    <ul>
+        <li>كتاب معجزة القرآن</li>
+        <li>كتاب الأدلة المادية على وجود الله</li>
+        <li>كتاب أنت تسأل والإسلام يجيب</li>
+        <li>كتاب الإسلام والفكر المعاصر</li>
+        <li>كتاب قضايا العصر</li>
+        <li>كتاب أسئلة حرجة وأجوبة صريحة</li>
+    </ul>
+    <p>
+        وتوفي الشيخ محمد متولى عن عمر يناهز السابعة والثمانين، في 22 صفر 1419هـ، الموافق 17 يونيو 1998م.
+    </p>
+
+    <!-- زر الرجوع إلى الصفحة الرئيسية مصحح ومغلق بدقة -->
+    <div style="text-align: center;">
+        <a href="bnm1.html" class="back-link">↩ للرجوع إلى الصفحة الرئيسية اضغط هنا</a>
+    </div>
+
+</div>
+
+<!-- زر الصعود لأعلى -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="الذهاب للأعلى">↑ أعلى</button>
+
+<!-- قسم الـ JavaScript لإضافة حيوية تفاعلية -->
+<script>
+    var mybutton = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    console.log("تم تحميل صفحة الشيخ الشعراوي بنجاح!");
+</script>
+
+</body>
+</html>

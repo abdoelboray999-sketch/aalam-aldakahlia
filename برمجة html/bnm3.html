@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakahlia media - الفريق كامل الوزير</title>
+    
+    <!-- قسم الـ CSS لتنسيق وتجميل الصفحة بنفس ستايل الصفحات السابقة -->
+    <style>
+        body {
+            background-color: #e6f2ff; /* لون الخلفية المتناسق */
+            font-family: 'Andalus', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2b2b2b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #0056b3;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق الصورة الشخصية للفريق كامل الوزير */
+        .article-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            margin: 20px auto 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .article-img:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #d9534f;
+            font-size: 24px;
+            margin-top: 40px;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* رابط العودة للرئيسية */
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 18px;
+            background-color: #0056b3;
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #003d82;
+            text-decoration: none;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003d82;
+        }
+
+        /* زر الصعود لأعلى الخاص بالـ JS */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #003d82;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>الفريق كامل الوزير</h1>
+    </header>
+
+    <!-- تم تحديث رابط الصورة برابط جديد ومباشر بالكامل -->
+    <img src="data:image/jpeg;base64,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" class="article-img" width="400" height="400" alt="الفريق كامل الوزير">
+
+    <p>
+        يتولى الفريق مهندس كامل الوزير، منصب وزير النقل في حكومة الدكتور مصطفى مدبولي، والمقرر أن تؤدي حلف اليمين غداً برئاسة الجمهورية، وتضمنت تغيير ما يقرب من 20 حقيبة وزارية ودمج وزارات أخرى على رأسها وزارة الهجرة.
+    </p>
+
+    <h2>من هو الفريق كامل الوزير وزير النقل؟</h2>
+    <p>
+        في السطور التالية، تُقدّم «الوطن»، معلومات عن كامل الوزير وزير النقل، وفق الموقع الإلكتروني للوزارة، حيث تخرج في الكلية الفنية العسكرية قسم الهندسة المدنية الدفعة 17 في يوليو 1980، وشغل جميع الوظائف القيادية بسلاح المهندسين العسكريين، وتدرج في المناصب حتى تولي منصب مدير إدارة المهندسين العسكريين في 2011.
+    </p>
+    <p>
+        وتولى الفريق كامل الوزير، منصب رئيس أركان الهيئة الهندسية للقوات المسلحة في يوليو 2014، وكُلف من الرئيس عبدالفتاح السيسي باللإشراف على مشروع حفر قناة السويس الجديدة والانتهاء منها في عام واحد فقط، كما تولى منصب رئيس الهيئة الهندسية للقوات المسلحة في 15 ديسمبر 2015 حتى 11 مارس 2019.
+    </p>
+
+    <h2>إنجازات كامل الوزير في مترو الأنفاق والسكة الحديد</h2>
+    <p>
+        رُقي «الوزير» لرتبة فريق في 10 مارس 2019، وتولى حقيبة وزارة النقل في 11 مارس من نفس العام، حيث حقق بها العديد من الإنجازات الضخمة سواء في منظومة مترو الأنفاق أو <a href="https://www.elwatannews.com/news/details/7407156" target="_blank">السكك الحديدية</a> أو الموانئ البرية والبحرية والجافة.
+    </p>
+    <p>
+        حصل الفريق كامل الوزير، على جميع الفرق «التعليمية - التدريبية» بسلاح المهندسين العسكريين, كما حصل على ماجيستير العلوم العسكرية الدورة 40 أركان حرب وزمالة كلية الحرب العليا، وأكاديمية ناصر العسكرية العليا الدورة 24 ودورة كبار القادة عام 2014.
+    </p>
+
+    <!-- زر الرجوع إلى الصفحة الرئيسية -->
+    <div style="text-align: center;">
+        <a href="bnm1.html" class="back-link">↩ للرجوع إلى الصفحة الرئيسية اضغط هنا</a>
+    </div>
+
+</div>
+
+<!-- زر الصعود لأعلى -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="الذهاب للأعلى">↑ أعلى</button>
+
+<!-- قسم الـ JavaScript لإضافة حيوية تفاعلية -->
+<script>
+    var mybutton = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    console.log("تم تحديث رابط صورة الفريق كامل الوزير بنجاح!");
+</script>
+
+</body>
+</html>
